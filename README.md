@@ -1,0 +1,2 @@
+# premierecsv2srt
+Premiereのグラフィックテロップcsvから英語字幕srtを生成するスクリプト
