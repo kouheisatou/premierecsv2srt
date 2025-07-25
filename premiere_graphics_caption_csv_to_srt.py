@@ -35,7 +35,8 @@ async def main():
         start = re.sub(r':(?!.+:)', ',', row[0].replace(";", ":"), flags=re.DOTALL)
         end = re.sub(r':(?!.+:)', ',', row[1].replace(";", ":"), flags=re.DOTALL)
         result += f"{start} --> {end}\n"
-        translated = await translate_text(row[2])
+        japanese = row[2].replace("\n", "")
+        translated = await translate_text(japanese)
         print(row[2])
         print(translated)
         result += f"{translated}\n\n"
